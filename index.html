@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AppyCalls</title>
+<style>
+body{margin:0;font-family:Arial;background:#101827;color:white}
+header{background:#1769ff;padding:24px;font-size:27px;font-weight:bold}
+main{padding:20px}
+.card{background:#202d42;padding:18px;border-radius:16px;margin:15px 0}
+button{background:#1769ff;color:white;border:0;border-radius:10px;padding:13px;margin:5px;font-size:16px}
+input{box-sizing:border-box;width:100%;padding:14px;border-radius:10px;border:0;margin:8px 0}
+</style>
+</head>
+<body>
+<header>📞 AppyCalls</header>
+<main>
+  <h2>সবাই থাকুক সংযুক্ত ❤️</h2>
+  <div class="card">
+    <h3>💬 Messages</h3>
+    <input id="msg" placeholder="তোমার মেসেজ লেখো">
+    <button onclick="sendMsg()">Send</button>
+    <p id="result"></p>
+  </div>
+  <div class="card">
+    <h3>📞 Audio Call</h3>
+    <button onclick="alert('অডিও কল চালাতে সার্ভার সেটআপ প্রয়োজন।')">Audio Call</button>
+  </div>
+  <div class="card">
+    <h3>📹 Video Call</h3>
+    <button onclick="alert('ভিডিও কল চালাতে সার্ভার সেটআপ প্রয়োজন।')">Video Call</button>
+  </div>
+</main>
+<script>
+function sendMsg(){
+ const m=document.getElementById('msg').value.trim();
+ if(!m)return;
+ document.getElementById('result').textContent='তোমার মেসেজ: '+m;
+}
+</script>
+</body>
+</html>
